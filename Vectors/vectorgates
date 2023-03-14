@@ -1,0 +1,71 @@
+#! /usr/bin/vvp
+:ivl_version "10.3 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "system";
+:vpi_module "vhdl_sys";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_0x55a8deb84030 .scope module, "tb" "tb" 2 18;
+ .timescale 0 0;
+L_0x7f985bfb40a8 .functor BUFT 1, C4<00>, C4<0>, C4<0>, C4<0>;
+v0x55a8debce160_0 .net *"_s3", 1 0, L_0x7f985bfb40a8;  1 drivers
+L_0x7f985bfb40f0 .functor BUFT 1, C4<00>, C4<0>, C4<0>, C4<0>;
+v0x55a8debce260_0 .net *"_s8", 1 0, L_0x7f985bfb40f0;  1 drivers
+v0x55a8debce340_0 .var "a", 0 0;
+v0x55a8debce3e0_0 .var "b", 0 0;
+v0x55a8debce4a0_0 .net "out_not", 0 0, L_0x55a8debcf110;  1 drivers
+v0x55a8debce560_0 .net "out_or_bitwise", 0 0, L_0x55a8debcf020;  1 drivers
+v0x55a8debce620_0 .net "out_or_logical", 0 0, L_0x55a8debcea10;  1 drivers
+L_0x55a8debcedc0 .concat [ 1 2 0 0], v0x55a8debce340_0, L_0x7f985bfb40a8;
+L_0x55a8debceef0 .concat [ 1 2 0 0], v0x55a8debce3e0_0, L_0x7f985bfb40f0;
+L_0x55a8debcf020 .part L_0x55a8debce6c0, 0, 1;
+L_0x55a8debcf110 .part L_0x55a8debcebe0, 0, 1;
+S_0x55a8deb841b0 .scope module, "u0" "vectorgates" 2 22, 2 1 0, S_0x55a8deb84030;
+ .timescale 0 0;
+    .port_info 0 /INPUT 3 "a"
+    .port_info 1 /INPUT 3 "b"
+    .port_info 2 /OUTPUT 3 "out_or_bitwise"
+    .port_info 3 /OUTPUT 1 "out_or_logical"
+    .port_info 4 /OUTPUT 6 "out_not"
+L_0x55a8debce6c0 .functor OR 3, L_0x55a8debcedc0, L_0x55a8debceef0, C4<000>, C4<000>;
+L_0x55a8debcea10 .functor OR 1, L_0x55a8debce760, L_0x55a8debce8d0, C4<0>, C4<0>;
+L_0x55a8debceb70 .functor NOT 3, L_0x55a8debceef0, C4<000>, C4<000>, C4<000>;
+L_0x55a8debcecd0 .functor NOT 3, L_0x55a8debcedc0, C4<000>, C4<000>, C4<000>;
+v0x55a8deb84380_0 .net *"_s14", 2 0, L_0x55a8debceb70;  1 drivers
+v0x55a8debcd7a0_0 .net *"_s19", 2 0, L_0x55a8debcecd0;  1 drivers
+L_0x7f985bfb4018 .functor BUFT 1, C4<000>, C4<0>, C4<0>, C4<0>;
+v0x55a8debcd880_0 .net/2u *"_s2", 2 0, L_0x7f985bfb4018;  1 drivers
+v0x55a8debcd940_0 .net *"_s4", 0 0, L_0x55a8debce760;  1 drivers
+L_0x7f985bfb4060 .functor BUFT 1, C4<000>, C4<0>, C4<0>, C4<0>;
+v0x55a8debcda00_0 .net/2u *"_s6", 2 0, L_0x7f985bfb4060;  1 drivers
+v0x55a8debcdb30_0 .net *"_s8", 0 0, L_0x55a8debce8d0;  1 drivers
+v0x55a8debcdbf0_0 .net "a", 2 0, L_0x55a8debcedc0;  1 drivers
+v0x55a8debcdcd0_0 .net "b", 2 0, L_0x55a8debceef0;  1 drivers
+v0x55a8debcddb0_0 .net "out_not", 5 0, L_0x55a8debcebe0;  1 drivers
+v0x55a8debcdf20_0 .net "out_or_bitwise", 2 0, L_0x55a8debce6c0;  1 drivers
+v0x55a8debce000_0 .net "out_or_logical", 0 0, L_0x55a8debcea10;  alias, 1 drivers
+L_0x55a8debce760 .cmp/ne 3, L_0x55a8debcedc0, L_0x7f985bfb4018;
+L_0x55a8debce8d0 .cmp/ne 3, L_0x55a8debceef0, L_0x7f985bfb4060;
+L_0x55a8debcebe0 .concat8 [ 3 3 0 0], L_0x55a8debcecd0, L_0x55a8debceb70;
+    .scope S_0x55a8deb84030;
+T_0 ;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x55a8debce340_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x55a8debce3e0_0, 0, 1;
+    %end;
+    .thread T_0;
+    .scope S_0x55a8deb84030;
+T_1 ;
+    %vpi_call 2 31 "$monitor", "%b", v0x55a8debce560_0 {0 0 0};
+    %vpi_call 2 32 "$monitor", "%b", v0x55a8debce620_0 {0 0 0};
+    %vpi_call 2 33 "$monitor", "%b", v0x55a8debce4a0_0 {0 0 0};
+    %vpi_call 2 34 "$finish" {0 0 0};
+    %end;
+    .thread T_1;
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "vectorgates.v";

@@ -13,3 +13,25 @@ module vectorgates(
     
 
 endmodule
+
+
+module tb;
+    reg a, b;
+    wire out_or_bitwise, out_or_logical, out_not;
+
+    vectorgates u0 (.a(a), .b(b), .out_not(out_not), .out_or_bitwise(out_or_bitwise), .out_or_logical(out_or_logical));
+
+    initial begin
+        a = 1'b0;
+        b = 1'b0;  
+    end
+
+
+    initial begin
+        $monitor("%b", out_or_bitwise);
+        $monitor("%b", out_or_logical);
+        $monitor("%b", out_not);
+        $finish;
+    end
+
+endmodule

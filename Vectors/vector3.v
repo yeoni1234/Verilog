@@ -7,11 +7,8 @@ module vector3(
 
 );
 
-    assign w = {a, b[2:0]};
-    assign x = {b[4:2], c};
-    assign y = {d[2:0], e};
-    assign z = {d[4:2], f};
- 
+    assign {w, x, y, z} = {a, b, c, d, e, f, 2'b11};
+    
 
     //Concatenation needs to know the width of every component (or how would you know the length of the result?). 
     //Thus, {1, 2, 3} is illegal and results in the error message: unsized constants are not allowed in concatenations.
@@ -29,13 +26,36 @@ endmodule
 
 
 module tb;
-    input [4:0] a, b, c, d, e, f; 
-    output [7:0] w, x, y, z;
 
+    reg [4:0] a, b, c, d, e, f;  //input = reg
+    wire [7:0] w, x, y, z;      //output = wire
+    wire [7:0] w, 
+    wire [3:0] x, 
+    wire  z[3:0];
+    integer i;
+    vector3 inst1 (a, b, c, d, e, f, w, x, y, z);
 
-    vector3 u0(.a(a), .b(b), .c(c), .d(d), .e(e), .f(f),.x(x), .y(y), .w(w), .z(z) );
+   // vector3 u0(.a(a), .b(b), .c(c), .d(d), .e(e), .f(f),.x(x), .y(y), .w(w), .z(z) );
+    
+    initial begin // 임의로 값 주기
+    a = 0;
+    b = 0;
+    c = 0;
+    d = 0;
+    e = 0;
+    f = 0;
+        for (i = 0; i <16; i += 1) begin
+            #10
+            a = (a+1)%31;
+            b = (b+2)%31;
+            c = (c+3)%31;
+            d = (d+4)%31;
+            e = (e+5)%31;
+            f = (f+6)%31;
+    end
 
-  initial begin
+    end
+    initial begin
       $dumpfile("vector3.vcd");
       $dumpvars;
       #10000 $finish;
