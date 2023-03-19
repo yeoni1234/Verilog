@@ -1,0 +1,51 @@
+#! /usr/bin/vvp
+:ivl_version "10.3 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "system";
+:vpi_module "vhdl_sys";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_0x55fb31521170 .scope module, "vector5" "vector5" 2 1;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "a"
+    .port_info 1 /INPUT 1 "b"
+    .port_info 2 /INPUT 1 "c"
+    .port_info 3 /INPUT 1 "d"
+    .port_info 4 /INPUT 1 "e"
+    .port_info 5 /OUTPUT 25 "out"
+L_0x55fb31521030 .functor NOT 25, L_0x55fb31566c70, C4<0000000000000000000000000>, C4<0000000000000000000000000>, C4<0000000000000000000000000>;
+L_0x55fb31577190 .functor XOR 25, L_0x55fb31521030, L_0x55fb31577020, C4<0000000000000000000000000>, C4<0000000000000000000000000>;
+v0x55fb31521390_0 .net *"_s0", 4 0, L_0x55fb31566ae0;  1 drivers
+v0x55fb31565f80_0 .net *"_s10", 24 0, L_0x55fb31577020;  1 drivers
+L_0x7f2d1d745060 .functor BUFT 1, C4<00000000000000000000>, C4<0>, C4<0>, C4<0>;
+v0x55fb31566060_0 .net *"_s13", 19 0, L_0x7f2d1d745060;  1 drivers
+v0x55fb31566120_0 .net *"_s2", 24 0, L_0x55fb31566c70;  1 drivers
+L_0x7f2d1d745018 .functor BUFT 1, C4<00000000000000000000>, C4<0>, C4<0>, C4<0>;
+v0x55fb31566200_0 .net *"_s5", 19 0, L_0x7f2d1d745018;  1 drivers
+v0x55fb31566330_0 .net *"_s6", 24 0, L_0x55fb31521030;  1 drivers
+v0x55fb31566410_0 .net *"_s8", 4 0, L_0x55fb31576df0;  1 drivers
+o0x7f2d1d78e168 .functor BUFZ 1, C4<z>; HiZ drive
+v0x55fb315664f0_0 .net "a", 0 0, o0x7f2d1d78e168;  0 drivers
+o0x7f2d1d78e198 .functor BUFZ 1, C4<z>; HiZ drive
+v0x55fb315665b0_0 .net "b", 0 0, o0x7f2d1d78e198;  0 drivers
+o0x7f2d1d78e1c8 .functor BUFZ 1, C4<z>; HiZ drive
+v0x55fb31566700_0 .net "c", 0 0, o0x7f2d1d78e1c8;  0 drivers
+o0x7f2d1d78e1f8 .functor BUFZ 1, C4<z>; HiZ drive
+v0x55fb315667c0_0 .net "d", 0 0, o0x7f2d1d78e1f8;  0 drivers
+o0x7f2d1d78e228 .functor BUFZ 1, C4<z>; HiZ drive
+v0x55fb31566880_0 .net "e", 0 0, o0x7f2d1d78e228;  0 drivers
+v0x55fb31566940_0 .net "out", 24 0, L_0x55fb31577190;  1 drivers
+LS_0x55fb31566ae0_0_0 .concat [ 1 1 1 1], o0x7f2d1d78e228, o0x7f2d1d78e1f8, o0x7f2d1d78e1c8, o0x7f2d1d78e198;
+LS_0x55fb31566ae0_0_4 .concat [ 1 0 0 0], o0x7f2d1d78e168;
+L_0x55fb31566ae0 .concat [ 4 1 0 0], LS_0x55fb31566ae0_0_0, LS_0x55fb31566ae0_0_4;
+L_0x55fb31566c70 .concat [ 5 20 0 0], L_0x55fb31566ae0, L_0x7f2d1d745018;
+LS_0x55fb31576df0_0_0 .concat [ 1 1 1 1], o0x7f2d1d78e228, o0x7f2d1d78e1f8, o0x7f2d1d78e1c8, o0x7f2d1d78e198;
+LS_0x55fb31576df0_0_4 .concat [ 1 0 0 0], o0x7f2d1d78e168;
+L_0x55fb31576df0 .concat [ 4 1 0 0], LS_0x55fb31576df0_0_0, LS_0x55fb31576df0_0_4;
+L_0x55fb31577020 .concat [ 5 20 0 0], L_0x55fb31576df0, L_0x7f2d1d745060;
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "vector5.v";
