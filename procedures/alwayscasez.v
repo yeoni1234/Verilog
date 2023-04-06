@@ -7,15 +7,15 @@ module alwayscasez(
 
     always @(*) begin
 
-        case (in[7:0])
-            4'bzzz1 : pos = 0;
-            4'bzz10 : pos = 1;
-            4'bzz11 : pos = 2;
-            4'bz100 : pos = 3;
-            4'bz101 : pos = 4;
-            4'bz110 : pos = 5;
-            4'bz111 : pos = 6;
-            4'b1111 : pos = 7;
+        casez (in[7:0])
+            8'bzzzzzzz1 : pos = 0;
+            8'bzzzzzz1z : pos = 1;
+            8'bzzzzz1zz : pos = 2;
+            8'bzzzz1zzz : pos = 3;
+            8'bzzz1zzzz : pos = 4;
+            8'bzz1zzzzz : pos = 5;
+            8'bz1zzzzzz : pos = 6;
+            8'b1zzzzzzz : pos = 7;
 
             default : pos = 0;
 
