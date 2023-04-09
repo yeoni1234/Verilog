@@ -5,9 +5,7 @@ module faad(
 
 );
 
-    always @(*) begin
-
-
-    end
+    assign sum = a ^ b ^ cin;
+    assign cout = ((a ^ b) & cin) | (a & b);
 
 endmodule

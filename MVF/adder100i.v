@@ -7,5 +7,7 @@ module adder100i(
 
 );
 
+    assign sum = a ^ b ^ cin;
+    assign cout = ((a ^ b) & cin) | (a & b);
 
 endmodule
