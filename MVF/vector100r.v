@@ -23,12 +23,12 @@ endmodule
 
 module tb;
 
-    reg[99:0] in;
+    reg [99:0] in;
     wire[99:0] out;
 
-    vector100r u0(.in(in), .out(out));
-
     integer i;
+
+    vector100r u0(.in(in), .out(out));
 
     initial begin
 
