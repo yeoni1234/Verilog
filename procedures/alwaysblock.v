@@ -1,4 +1,4 @@
-module alwayscombi(
+module alwaysblock(
 
     input a, b,
     output wire out_assign,
@@ -8,7 +8,9 @@ module alwayscombi(
 
     assign out_assign = a & b;
 
-    always @(*) out_alwaysblock = a & b;
+    always @(*) begin
+        out_alwaysblock <= a & b;
+    end
 
 endmodule
 

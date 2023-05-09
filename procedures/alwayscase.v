@@ -22,7 +22,7 @@ module alwayscase(
             3'b100 : out = data4;
             3'b101 : out = data5;
 
-            default : out = 0; // 요거!!!
+            default : out = 0; // case 문을 사용할 때는 default값을 적어줌으로써 latch방지!
         endcase
     end
     

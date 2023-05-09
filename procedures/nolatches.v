@@ -50,4 +50,14 @@ module nolatches(
 
 endmodule
 
+module tb;
+
+    reg [15:0] scancode;
+    wire left, down, right, up;
+
+    nolatches u0(.scancode(scancode), .left(left),.down(down), .right(right), .up(up));
+
+   endmodule
+
+
 

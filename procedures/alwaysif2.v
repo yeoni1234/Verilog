@@ -13,14 +13,14 @@ module alwaysif2(
         if (cpu_overheated)
             shut_off_computer = 1;
         else 
-            shut_off_computer 0 ;
+            shut_off_computer 0 ; // 모든 경우의 수를 적어줌으로써 latch 방지
         end
 
     always @(*) begin
         if (~arrived)
             keep_driving = ~gas_tank_empty;
         else    
-            keep_driving = 0;
+            keep_driving = 0; // 여기도 마찬가지
         end
 
 

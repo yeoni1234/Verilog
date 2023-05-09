@@ -1,4 +1,4 @@
-module alwaysclock(
+module alwaysblock2(
 
     input a, b, clk,
 
@@ -10,8 +10,14 @@ module alwaysclock(
 );
 
     assign out_assign = a ^ b;
-    always @(*) out_always_comb = a ^ b;
-    always @(posedge clk) out_always_ff = a ^ b;
+
+    always @(*) begin
+        out_always_comb <= a ^ b;
+    end
+
+    always @(posedge clk) begin
+        out_always_ff <= a ^ b;
+    end
 
 
 endmodule
