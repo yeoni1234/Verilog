@@ -1,0 +1,357 @@
+$date
+	Tue May  9 23:56:05 2023
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module tb $end
+$var wire 4 ! sum [3:0] $end
+$var wire 1 " cout $end
+$var reg 4 # a [3:0] $end
+$var reg 4 $ b [3:0] $end
+$var reg 1 % cin $end
+$var integer 32 & i [31:0] $end
+$scope module u0 $end
+$var wire 4 ' a [3:0] $end
+$var wire 4 ( b [3:0] $end
+$var wire 4 ) c_w [3:0] $end
+$var wire 1 % cin $end
+$var wire 4 * sum [3:0] $end
+$var wire 1 " cout $end
+$scope module inst0 $end
+$var wire 1 + a $end
+$var wire 1 , b $end
+$var wire 1 % cin $end
+$var wire 1 - sum $end
+$var wire 1 . cout $end
+$upscope $end
+$scope module inst1 $end
+$var wire 1 / a $end
+$var wire 1 0 b $end
+$var wire 1 1 cin $end
+$var wire 1 2 sum $end
+$var wire 1 3 cout $end
+$upscope $end
+$scope module inst2 $end
+$var wire 1 4 a $end
+$var wire 1 5 b $end
+$var wire 1 6 cin $end
+$var wire 1 7 sum $end
+$var wire 1 8 cout $end
+$upscope $end
+$scope module inst3 $end
+$var wire 1 9 a $end
+$var wire 1 : b $end
+$var wire 1 ; cin $end
+$var wire 1 < sum $end
+$var wire 1 = cout $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0=
+0<
+0;
+0:
+09
+08
+07
+06
+05
+04
+03
+02
+01
+00
+0/
+0.
+0-
+0,
+0+
+b0 *
+b0 )
+b0 (
+b0 '
+b0 &
+0%
+b0 $
+b0 #
+0"
+b0 !
+$end
+#10
+0"
+0<
+0=
+0;
+08
+06
+12
+03
+1.
+b110 !
+b110 *
+17
+11
+1,
+14
+b1 &
+b1 )
+1%
+b1 $
+b1 (
+b100 #
+b100 '
+#20
+x"
+x=
+x;
+x7
+x8
+x6
+x<
+1-
+bx01 !
+bx01 *
+02
+bx1 )
+13
+15
+1:
+1+
+1/
+04
+b10 &
+b1101 $
+b1101 (
+b11 #
+b11 '
+#30
+bx00 !
+bx00 *
+0-
+0,
+10
+05
+0:
+0/
+14
+b11 &
+b10 $
+b10 (
+b101 #
+b101 '
+#40
+15
+19
+b100 &
+b110 $
+b110 (
+b1101 #
+b1101 '
+#50
+07
+18
+06
+bx010 !
+bx010 *
+12
+bx01 )
+03
+00
+1:
+b101 &
+b1100 $
+b1100 (
+#60
+01
+bx011 !
+bx011 *
+1-
+0.
+1,
+0:
+0+
+1/
+09
+b110 &
+bx00 )
+0%
+b101 $
+b101 (
+b110 #
+b110 '
+#70
+x7
+x8
+x6
+x2
+x3
+x1
+bx0 !
+bx0 *
+0-
+bx )
+1.
+10
+1+
+0/
+b111 &
+b111 $
+b111 (
+b101 #
+b101 '
+#80
+02
+13
+01
+bx01 !
+bx01 *
+1-
+bx0 )
+0.
+0,
+05
+1/
+19
+b1000 &
+b10 $
+b10 (
+b1111 #
+b1111 '
+#90
+0"
+1<
+0=
+0;
+b1101 !
+b1101 *
+17
+08
+06
+b0 )
+03
+1,
+00
+15
+0+
+0/
+04
+b1001 &
+b101 $
+b101 (
+b1000 #
+b1000 '
+#100
+x"
+x;
+12
+x<
+x=
+bx011 !
+bx011 *
+07
+18
+11
+1.
+1:
+1+
+14
+b1010 &
+bx01 )
+1%
+b1101 $
+b1101 (
+b1101 #
+b1101 '
+#110
+x"
+x7
+x<
+x=
+x6
+x;
+0.
+bx01 !
+bx01 *
+02
+13
+x8
+01
+0,
+10
+05
+1/
+04
+09
+b1011 &
+bx0 )
+0%
+b1010 $
+b1010 (
+b11 #
+b11 '
+#120
+bx1 !
+bx1 *
+x2
+x3
+x1
+0+
+0/
+b1100 &
+bx )
+1%
+b0 #
+b0 '
+#130
+12
+13
+11
+bx10 !
+bx10 *
+0-
+bx1 )
+1.
+1,
+0:
+1/
+14
+b1101 &
+b11 $
+b11 (
+b110 #
+b110 '
+#140
+bx11 !
+bx11 *
+1-
+1:
+1+
+04
+b1110 &
+b1011 $
+b1011 (
+b11 #
+b11 '
+#150
+bx1 !
+bx1 *
+x2
+x3
+x1
+bx )
+0.
+0,
+15
+0+
+b1111 &
+b1110 $
+b1110 (
+b10 #
+b10 '
