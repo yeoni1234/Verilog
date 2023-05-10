@@ -7,6 +7,7 @@ module mux256to1v(
 
 );
 
-    assign out = in[sel];
-
+    
+    assign out = in[sel * 4 + 3 -: 4];
+    
 endmodule
