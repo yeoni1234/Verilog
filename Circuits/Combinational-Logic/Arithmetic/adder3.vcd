@@ -1,0 +1,349 @@
+$date
+	Sat May 13 21:02:02 2023
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module tb $end
+$var wire 3 ! sum [2:0] $end
+$var wire 3 " cout [2:0] $end
+$var reg 3 # a [2:0] $end
+$var reg 3 $ b [2:0] $end
+$var reg 1 % cin $end
+$var integer 32 & i [31:0] $end
+$scope module u0 $end
+$var wire 3 ' a [2:0] $end
+$var wire 3 ( b [2:0] $end
+$var wire 1 % cin $end
+$var wire 3 ) sum [2:0] $end
+$var wire 3 * cout [2:0] $end
+$scope module u0 $end
+$var wire 1 + a $end
+$var wire 1 , b $end
+$var wire 1 % cin $end
+$var wire 1 - sum $end
+$var wire 1 . cout $end
+$upscope $end
+$scope module u1 $end
+$var wire 1 / a $end
+$var wire 1 0 b $end
+$var wire 1 1 cin $end
+$var wire 1 2 sum $end
+$var wire 1 3 cout $end
+$upscope $end
+$scope module u2 $end
+$var wire 1 4 a $end
+$var wire 1 5 b $end
+$var wire 1 6 cin $end
+$var wire 1 7 sum $end
+$var wire 1 8 cout $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+08
+07
+06
+05
+04
+03
+02
+01
+00
+0/
+0.
+0-
+0,
+0+
+b0 *
+b0 )
+b0 (
+b0 '
+b0 &
+0%
+b0 $
+b0 #
+b0 "
+b0 !
+$end
+#10
+12
+11
+b1 "
+b1 *
+1.
+b110 !
+b110 )
+17
+1,
+14
+b1 &
+1%
+b1 $
+b1 (
+b100 #
+b100 '
+#20
+07
+18
+16
+1-
+b1 !
+b1 )
+02
+b111 "
+b111 *
+13
+15
+1+
+1/
+04
+b10 &
+b101 $
+b101 (
+b11 #
+b11 '
+#30
+b0 !
+b0 )
+0-
+0,
+10
+05
+0/
+14
+b11 &
+b10 $
+b10 (
+b101 #
+b101 '
+#40
+b100 !
+b100 )
+17
+15
+b100 &
+b110 $
+b110 (
+#50
+07
+06
+b10 !
+b10 )
+12
+b101 "
+b101 *
+03
+00
+b101 &
+b100 $
+b100 (
+#60
+07
+06
+01
+12
+03
+b11 !
+b11 )
+1-
+b100 "
+b100 *
+0.
+1,
+0+
+1/
+b110 &
+0%
+b101 $
+b101 (
+b110 #
+b110 '
+#70
+17
+16
+02
+13
+11
+b100 !
+b100 )
+0-
+b111 "
+b111 *
+1.
+10
+1+
+0/
+b111 &
+b111 $
+b111 (
+b101 #
+b101 '
+#80
+01
+1-
+b110 "
+b110 *
+0.
+07
+b1 !
+b1 )
+02
+0,
+05
+1/
+b1000 &
+b10 $
+b10 (
+b111 #
+b111 '
+#90
+b101 !
+b101 )
+17
+08
+06
+b0 "
+b0 *
+03
+1,
+00
+15
+0+
+0/
+04
+b1001 &
+b101 $
+b101 (
+b0 #
+b0 '
+#100
+12
+11
+b11 !
+b11 )
+07
+18
+b101 "
+b101 *
+1.
+1+
+14
+b1010 &
+1%
+b101 #
+b101 '
+#110
+02
+b101 !
+b101 )
+17
+01
+16
+0.
+13
+b10 "
+b10 *
+08
+0,
+10
+05
+1/
+04
+b1011 &
+0%
+b10 $
+b10 (
+b11 #
+b11 '
+#120
+07
+06
+b11 !
+b11 )
+12
+b0 "
+b0 *
+03
+0+
+0/
+b1100 &
+1%
+b0 #
+b0 '
+#130
+18
+11
+16
+0-
+1.
+12
+b111 "
+b111 *
+13
+b10 !
+b10 )
+07
+1,
+1/
+14
+b1101 &
+b11 $
+b11 (
+b110 #
+b110 '
+#140
+1-
+b111 !
+b111 )
+17
+b11 "
+b11 *
+08
+1+
+04
+b1110 &
+b11 #
+b11 '
+#150
+02
+01
+0.
+b1 !
+b1 )
+07
+b110 "
+b110 *
+18
+0,
+15
+0+
+b1111 &
+b110 $
+b110 (
+b10 #
+b10 '
+#160
+12
+11
+b111 "
+b111 *
+1.
+b10 !
+b10 )
+0-
+1,
+05
+1+
+14
+b10000 &
+0%
+b11 $
+b11 (
+b111 #
+b111 '
